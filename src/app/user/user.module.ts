@@ -5,11 +5,23 @@ import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { UserService } from './services/user.service';
 import { TestComponentComponent } from './components/test-component/test-component.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   providers: [UserService],
-  declarations: [RegisterComponent, LoginComponent, TestComponentComponent],
-  imports: [CommonModule],
-  exports: [RegisterComponent, LoginComponent, TestComponentComponent],
+  declarations: [
+    RegisterComponent,
+    LoginComponent,
+    TestComponentComponent,
+    ProfileComponent,
+  ],
+  imports: [CommonModule, AppRoutingModule],
+  exports: [
+    RegisterComponent,
+    LoginComponent,
+    TestComponentComponent,
+    ProfileComponent,
+  ],
 })
 export class UserModule {}
