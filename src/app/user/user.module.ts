@@ -10,6 +10,6 @@ import { TestComponentComponent } from './components/test-component/test-compone
   providers: [UserService],
   declarations: [RegisterComponent, LoginComponent, TestComponentComponent],
   imports: [CommonModule],
-  exports: [RegisterComponent, LoginComponent],
+  exports: [RegisterComponent, LoginComponent, TestComponentComponent],
 })
 export class UserModule {}
