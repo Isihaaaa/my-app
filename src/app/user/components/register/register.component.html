@@ -1,1 +1,18 @@
-<p>register works!</p>
+<div class="container">
+    <div class="row">
+        <h1>Register</h1>
+        <form [formGroup]="userForm">
+            <label>
+                Username
+                <input type="text" name="name" formControlName="username">
+            </label>
+            <label>
+                Password
+                <input type="password" name="name" formControlName="password">
+            </label>
+        </form>
+        <button (click)="registration()">Registration</button>
+        <a routerLink="/login" routerLinkActive="active">go to login page</a>
+        <!-- <a routerLink="/profile" routerLinkActive="active">Navigate to Profile</a> -->
+    </div>
+</div>
