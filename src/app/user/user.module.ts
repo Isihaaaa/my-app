@@ -7,7 +7,7 @@ import { UserService } from './services/user.service';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AppRoutingModule } from '../app-routing.module';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   providers: [UserService],
@@ -17,7 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestComponentComponent,
     ProfileComponent,
   ],
-  imports: [CommonModule, AppRoutingModule, ReactiveFormsModule],
+  imports: [CommonModule, AppRoutingModule, FormsModule],
   exports: [
     RegisterComponent,
     LoginComponent,

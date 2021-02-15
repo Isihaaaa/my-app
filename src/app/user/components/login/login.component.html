@@ -3,11 +3,11 @@
         <h1>Login</h1>
         <label>
             Username
-            <input type="text" name="name">
+            <input [(ngModel)]="user" type="text" name="name">
         </label>
         <label>
             Password
-            <input type="text" name="name">
+            <input [(ngModel)]="password" type="password" name="name">
         </label>
         <button (click)="login()">Login</button>
         <a routerLink="/register" routerLinkActive="active">go to register page</a>

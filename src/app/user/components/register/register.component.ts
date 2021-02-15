@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,25 +6,15 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./register.component.sass'],
 })
 export class RegisterComponent implements OnInit {
-  userForm: FormGroup;
+  user: string = '';
+  password: string = '';
 
-  constructor(userForm: FormGroup) {
-    this.userForm = userForm;
-  }
+  constructor() {}
 
-  ngOnInit(): void {
-    this.userForm = new FormGroup({
-      username: new FormControl(''),
-      password: new FormControl(''),
-    });
-  }
+  ngOnInit(): void {}
 
   public registration() {
-    console.log(this.userForm.value);
-    // username: string, password: string
-    // if (username && password) {
-    //   console.log('registration');
-    // } else {
-    // }
+    if (this.user && this.password) {
+    }
   }
 }

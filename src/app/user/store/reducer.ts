@@ -1,29 +1,21 @@
-import { state } from '@angular/animations';
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './actions';
+import { registered, loggedIn } from './actions';
 import { IUserStoreState } from './type';
 
-export const initialState: IUserStoreState = {
-  counter: 0,
-  login: { name: 'asd', password: 'asd' },
-};
+const initialState: IUserStoreState = { login: undefined };
 
-const _counterReducer = createReducer(
+export const userReducer = createReducer(
   initialState,
-  on(increment, (state) => {
+  on(loggedIn, (state, { login }) => {
     return {
       ...state,
-      counter: state.counter + 1,
+      login,
     };
   }),
-  on(decrement, (state) => {
-    return { ...state, counter: state.counter - 1 };
-  }),
-  on(reset, (state) => {
-    return { ...state, counter: 0 };
+  on(registered, (state, { login }) => {
+    return {
+      ...state,
+      login,
+    };
   })
 );
-
-export function counterReducer(state: any, action: any) {
-  return _counterReducer(state, action);
-}

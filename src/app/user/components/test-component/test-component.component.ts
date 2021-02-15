@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { decrement, increment, reset } from '../../store/actions';
 
 @Component({
   selector: 'app-test-component',
@@ -17,15 +16,15 @@ export class TestComponentComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  increment() {
-    this.store.dispatch(increment());
-  }
+  // increment() {
+  //   this.store.dispatch(increment());
+  // }
 
-  decrement() {
-    this.store.dispatch(decrement());
-  }
+  // decrement() {
+  //   this.store.dispatch(decrement());
+  // }
 
-  reset() {
-    this.store.dispatch(reset());
-  }
+  // reset() {
+  //   this.store.dispatch(reset());
+  // }
 }

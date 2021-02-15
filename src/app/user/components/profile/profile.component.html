@@ -1,6 +1,8 @@
 <div class="container">
     <div class="row">
         <h1>Profile</h1>
+        <p>{{username$ | async}}</p>
+        <p>{{accessToken$ | async}}</p>
         <a routerLink="/login" routerLinkActive="active">Navigate to Login</a>
     </div>
 </div>

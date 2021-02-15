@@ -1,9 +1,12 @@
+import { ILogin } from '../models/login.model';
+
 export interface IUserStoreState {
-  login: ILoginStoreState;
-  counter: number;
+  login?: ILogin;
 }
 
-export interface ILoginStoreState {
-  name: string;
-  password: string;
+export interface ILoggedInPayload {
+  login: ILogin;
+}
+export interface IRegisteredPayload {
+  login: ILogin;
 }

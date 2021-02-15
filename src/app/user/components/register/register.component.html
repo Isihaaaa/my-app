@@ -1,14 +1,14 @@
 <div class="container">
     <div class="row">
         <h1>Register</h1>
-        <form [formGroup]="userForm">
+        <form>
             <label>
                 Username
-                <input type="text" name="name" formControlName="username">
+                <input [(ngModel)]="user" type="text" name="name">
             </label>
             <label>
                 Password
-                <input type="password" name="name" formControlName="password">
+                <input [(ngModel)]="password" type="password" name="name">
             </label>
         </form>
         <button (click)="registration()">Registration</button>
